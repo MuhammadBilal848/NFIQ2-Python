@@ -76,10 +76,14 @@ Quick Build: Library + Command-line Interface
 > (i.e., do **not** use the GitHub ZIP file download).
 
 ```bash
-git clone --recursive https://github.com/usnistgov/NFIQ2.git
-cd NFIQ2
+git clone --recursive https://github.com/MuhammadBilal848/NFIQ2-Python.git
+cd NFIQ2-Python
 mkdir build
 cd build
 cmake ..
 cmake --build .
+cd ..
+mv NFIQ_Python_Module/* build/install_staging/nfiq2/bin/ && rmdir NFIQ_Python_Module
+cd build/install_staging/nfiq2/bin/
+python3 nfiqmod.py
 ```
