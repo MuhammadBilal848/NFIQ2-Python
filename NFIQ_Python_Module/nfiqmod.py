@@ -36,8 +36,8 @@ class NFIQ2:
                 raise RuntimeError(f"NFIQ2 failed with error: {result.stderr}")
 
             output = result.stdout.strip()
-            print(f"NFIQ2 stdout: {output}")  # Debugging: Print NFIQ2 output
-            quality_score = int(output.split()[-1])  # Assuming the score is the last part of the output
+            print(f"NFIQ2 stdout: {output}")   
+            quality_score = int(output.split()[-1])   
             return quality_score
 
         except subprocess.TimeoutExpired:
