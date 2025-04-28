@@ -61,6 +61,10 @@ mkdir build
 cd build
 cmake .. -DBUILD_NFIQ2_CLI=OFF
 cmake --build .
+cd ..
+mv NFIQ_Python_Module/* build/install_staging/nfiq2/bin/ && rmdir NFIQ_Python_Module
+cd build/install_staging/nfiq2/bin/
+python3 nfiqmod.py
 ```
 
 Quick Build: Library + Command-line Interface
